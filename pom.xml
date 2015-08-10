@@ -83,6 +83,7 @@
         <!-- Plugin configuration. There are many available options, 
              see gwt-maven-plugin documentation at codehaus.org --> 
         <configuration>
+    <jsInteropMode>JS</jsInteropMode>
           <modules>
             <module>com.florianf.GwtCordova</module>
           </modules>
