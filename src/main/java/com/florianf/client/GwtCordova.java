@@ -47,9 +47,27 @@ public class GwtCordova implements EntryPoint {
             confirmButton.addClickHandler(clickEvent -> {
                 Notification notification = Cordova.getNotification();
                 String[] arr = new String[]{"a", "b"};
-                notification.confirm("hello", i -> confirmButton.setText("gurb"),"title", arr);
+                notification.confirm("hello", i -> confirmButton.setText("gurb"), "title", arr);
             });
             RootPanel.get().add(confirmButton);
+
+            final Button promptButton = new Button("prompt");
+            promptButton.addClickHandler(clickEvent -> {
+                Notification notification = Cordova.getNotification();
+                String[] arr = new String[]{"a", "b"};
+                notification.prompt("hello", i -> {
+                    if (i.getButtonIndex() == 1) promptButton.setText(i.getInput1());
+                }, "title", arr, "adf");
+            });
+            RootPanel.get().add(promptButton);
+
+            final Button beepButton = new Button("beep");
+            beepButton.addClickHandler(clickEvent -> {
+                Notification notification = Cordova.getNotification();
+                notification.beep(1);
+            });
+            RootPanel.get().add(beepButton);
+
 
         });
         phoneGap.initializePhoneGap();

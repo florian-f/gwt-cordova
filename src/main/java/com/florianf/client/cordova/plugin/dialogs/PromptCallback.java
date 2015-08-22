@@ -6,7 +6,7 @@ import com.google.gwt.core.client.js.JsType;
 /**
  * Created by florian on 22.08.15.
  */
-@JsType
-public interface Callback {
-    void apply();
+@JsFunction
+public interface PromptCallback {
+    void apply(Results results);
 }
