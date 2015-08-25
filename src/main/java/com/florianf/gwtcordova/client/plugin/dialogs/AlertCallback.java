@@ -1,6 +1,5 @@
-package com.florianf.client.cordova.plugin.dialogs;
+package com.florianf.gwtcordova.client.plugin.dialogs;
 
-import com.google.gwt.core.client.js.JsFunction;
 import com.google.gwt.core.client.js.JsType;
 
 /**

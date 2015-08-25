@@ -13,27 +13,33 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.florianf.client.gwtphonegap;
+package com.florianf.gwtcordova.client;
 
 import com.google.gwt.event.shared.GwtEvent;
 
 /**
- * This event is fired if phonegap was not successfully initialized in a given time period
+ * This event is fired after PhoneGap is initialized successfully and is ready
+ * for usage
+ * 
  * @author Daniel Kurka
- *
+ * 
  */
-public class PhoneGapTimeoutEvent extends GwtEvent<PhoneGapTimeoutHandler> {
+public class PhoneGapAvailableEvent extends GwtEvent<PhoneGapAvailableHandler> {
 
-	public static final GwtEvent.Type<PhoneGapTimeoutHandler> TYPE = new Type<PhoneGapTimeoutHandler>();
+	public static final GwtEvent.Type<PhoneGapAvailableHandler> TYPE = new GwtEvent.Type<PhoneGapAvailableHandler>();
+
+	public PhoneGapAvailableEvent() {
+
+	}
 
 	@Override
-	public com.google.gwt.event.shared.GwtEvent.Type<PhoneGapTimeoutHandler> getAssociatedType() {
+	public com.google.gwt.event.shared.GwtEvent.Type<PhoneGapAvailableHandler> getAssociatedType() {
 		return TYPE;
 	}
 
 	@Override
-	protected void dispatch(PhoneGapTimeoutHandler handler) {
-		handler.onPhoneGapTimeout(this);
+	protected void dispatch(PhoneGapAvailableHandler handler) {
+		handler.onPhoneGapAvailable(this);
 
 	}
 

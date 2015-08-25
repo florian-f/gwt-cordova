@@ -11,17 +11,12 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.florianf.client.gwtphonegap;
+package com.florianf.gwtcordova.client;
 
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Timer;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import com.google.web.bindery.event.shared.SimpleEventBus;
-
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class PhoneGapStandardImpl implements PhoneGap {
 
@@ -127,7 +122,7 @@ public class PhoneGapStandardImpl implements PhoneGap {
   private native void setupReadyHook() /*-{
 		var that = this;
 		var f = function() {
-			that.@com.florianf.client.gwtphonegap.PhoneGapStandardImpl::nativeDeviceReady()();
+			that.@com.florianf.gwtcordova.client.PhoneGapStandardImpl::nativeDeviceReady()();
 		};
 		$doc.addEventListener("deviceready", $entry(f), false);
 

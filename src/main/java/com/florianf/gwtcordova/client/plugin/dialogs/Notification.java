@@ -1,9 +1,12 @@
-package com.florianf.client.cordova.plugin.dialogs;
+package com.florianf.gwtcordova.client.plugin.dialogs;
 
 import com.google.gwt.core.client.js.JsType;
 
 /**
  * Created by florian on 22.08.15.
+ *
+ * https://github.com/apache/cordova-plugin-dialogs
+ *
  */
 @JsType
 public interface Notification {

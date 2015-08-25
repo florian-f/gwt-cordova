@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.florianf</groupId>
   <artifactId>GwtCordova</artifactId>
-  <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>com.florianf.GwtCordova</name>
-  
+  <packaging>jar</packaging>
+  <version>0.1</version>
+  <name>com.florianf.gwtcordova.GwtCordova</name>
+
   <properties>
     <!-- Convenience property to set the GWT version -->
     <gwtVersion>2.8.0-SNAPSHOT</gwtVersion>
@@ -68,6 +68,15 @@
   </dependencies>
   
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/client/**</include>
+          <include>**/*.gwt.xml</include>
+        </includes>
+      </resource>
+    </resources>
     <plugins>
       <!-- GWT Maven Plugin-->
       <plugin>
@@ -85,7 +94,7 @@
         <configuration>
     <jsInteropMode>JS</jsInteropMode>
           <modules>
-            <module>com.florianf.GwtCordova</module>
+            <module>com.florianf.gwtcordova.GwtCordova</module>
           </modules>
           <!-- URL that should be opened by DevMode (gwt:run). -->
           <runTarget>GwtCordova.html</runTarget>

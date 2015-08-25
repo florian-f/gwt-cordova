@@ -1,9 +1,9 @@
-package com.florianf.client.cordova.plugin;
+package com.florianf.gwtcordova.client;
 
-import com.florianf.client.cordova.plugin.device.Device;
-import com.florianf.client.cordova.plugin.dialogs.Notification;
-import com.florianf.client.cordova.plugin.network.Connection;
-import com.google.gwt.core.client.JavaScriptObject;
+import com.florianf.gwtcordova.client.plugin.device.Device;
+import com.florianf.gwtcordova.client.plugin.dialogs.Notification;
+import com.florianf.gwtcordova.client.plugin.network.Connection;
+import com.florianf.gwtcordova.client.plugin.statusbar.StatusBar;
 import com.google.gwt.user.client.Timer;
 /**
  * Created by florian on 09.08.15.
@@ -25,6 +25,10 @@ public abstract class Cordova {
 
     public static native Notification getNotification()/*-{
         return $wnd.navigator.notification;
+    }-*/;
+
+    public static native StatusBar getStatusBar()/*-{
+        return $wnd.StatusBar;
     }-*/;
 
     // gwtphonegap
@@ -82,7 +86,7 @@ public abstract class Cordova {
     private native void setupReadyHook() /*-{
         var that = this;
         var f = function() {
-            that.@com.florianf.client.cordova.plugin.Cordova::nativeDeviceReady()();
+            that.@com.florianf.gwtcordova.client.Cordova::nativeDeviceReady()();
         };
         $doc.addEventListener("deviceready", $entry(f), false);
     }-*/;

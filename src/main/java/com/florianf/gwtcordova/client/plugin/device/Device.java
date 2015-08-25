@@ -1,4 +1,4 @@
-package com.florianf.client.cordova.plugin.device;
+package com.florianf.gwtcordova.client.plugin.device;
 
 import com.google.gwt.core.client.js.JsProperty;
 import com.google.gwt.core.client.js.JsType;

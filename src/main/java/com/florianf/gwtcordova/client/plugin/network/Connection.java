@@ -1,10 +1,13 @@
-package com.florianf.client.cordova.plugin.network;
+package com.florianf.gwtcordova.client.plugin.network;
 
 import com.google.gwt.core.client.js.JsProperty;
 import com.google.gwt.core.client.js.JsType;
 
 /**
  * Created by florian on 21.08.15.
+ *
+ * https://github.com/apache/cordova-plugin-network-information
+ *
  */
 @JsType
 public interface Connection {

@@ -1,19 +1,11 @@
-package com.florianf.client;
+package com.florianf.gwtcordova.client;
 
-import com.florianf.client.cordova.plugin.Cordova;
-import com.florianf.client.cordova.plugin.device.Device;
-import com.florianf.client.cordova.plugin.dialogs.ConfirmCallback;
-import com.florianf.client.cordova.plugin.dialogs.Notification;
-import com.florianf.client.cordova.plugin.network.Connection;
-import com.florianf.client.gwtphonegap.PhoneGap;
-import com.florianf.client.gwtphonegap.PhoneGapAvailableEvent;
-import com.florianf.client.gwtphonegap.PhoneGapAvailableHandler;
-import com.florianf.client.gwtphonegap.PhoneGapStandardImpl;
+import com.florianf.gwtcordova.client.plugin.device.Device;
+import com.florianf.gwtcordova.client.plugin.dialogs.Notification;
+import com.florianf.gwtcordova.client.plugin.network.Connection;
+
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.core.client.JsArray;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
 

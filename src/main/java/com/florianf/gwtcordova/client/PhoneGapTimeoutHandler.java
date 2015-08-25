@@ -13,10 +13,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.florianf.client.gwtphonegap;
+package com.florianf.gwtcordova.client;
 
 import com.google.gwt.event.shared.EventHandler;
 
-public interface PhoneGapAvailableHandler extends EventHandler {
-	public void onPhoneGapAvailable(PhoneGapAvailableEvent event);
+public interface PhoneGapTimeoutHandler extends EventHandler {
+	public void onPhoneGapTimeout(PhoneGapTimeoutEvent event);
 }
