@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<module>
-  <inherits name='com.google.gwt.user.User'/>
-
-
-  <!--<module rename-to='gwtcordova'>-->
-
+<!--<module>-->
   <!--<inherits name='com.google.gwt.user.User'/>-->
 
-  <!--<entry-point class='com.florianf.gwtcordova.client.GwtCordova'/>-->
+
+  <module rename-to='gwtcordova'>
+
+  <inherits name='com.google.gwt.user.User'/>
+
+  <entry-point class='com.florianf.gwtcordova.client.GwtCordova'/>
 
   <source path='client'/>
 
-  <!--<set-property name="user.agent" value="safari"/>-->
+  <set-property name="user.agent" value="safari"/>
 
-  <!--<add-linker name="xsiframe"/>-->
+  <collapse-all-properties value="true" />
+
+  <add-linker name="xsiframe"/>
   <replace-with class="com.florianf.gwtcordova.client.PhoneGapStandardImpl">
     <when-type-is class="com.florianf.gwtcordova.client.PhoneGap"/>
   </replace-with>

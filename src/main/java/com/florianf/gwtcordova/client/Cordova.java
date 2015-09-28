@@ -1,10 +1,15 @@
 package com.florianf.gwtcordova.client;
 
+import com.florianf.gwtcordova.client.elemental.Event;
+import com.florianf.gwtcordova.client.elemental.EventListener;
 import com.florianf.gwtcordova.client.plugin.device.Device;
 import com.florianf.gwtcordova.client.plugin.dialogs.Notification;
 import com.florianf.gwtcordova.client.plugin.network.Connection;
 import com.florianf.gwtcordova.client.plugin.statusbar.StatusBar;
+import com.google.gwt.dom.client.Document;
 import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Window;
+
 /**
  * Created by florian on 09.08.15.
  */
@@ -36,14 +41,36 @@ public abstract class Cordova {
         return typeof(device) != 'undefined';
     }-*/;
 
-    // gwtphonegap
-    public static void initializeCordova(){
-        initializeCordova(10000);
+    /**
+     * gwt-api-generator
+     * Returns the JsInterop instance of Document
+     */
+    public static com.florianf.gwtcordova.client.elemental.Document getDocument() {
+        return ( com.florianf.gwtcordova.client.elemental.Document) Document.get();
     }
+    // gwtphonegap
+//    public static void initializeCordova(){
+//        initializeCordova(10000);
+//    }
 
     // gwtphonegap
-    public static void initializeCordova(final int timeoutInMs) {
+    public static void initializeCordova(final int timeoutInMs,  DeviceReadyEvent.Listener listener) {
 
+        com.florianf.gwtcordova.client.elemental.Document document = (com.florianf.gwtcordova.client.elemental.Document) Document.get();
+//        document.addEventListener(DeviceReadyEvent.NAME, new DeviceReadyEvent.Listener() {
+//
+//            @Override
+//            protected void handleEvent(DeviceReadyEvent deviceReadyEvent) {
+//                deviceReady = true;
+//                listener.handleEvent(deviceReadyEvent);
+//            }
+//        });
+//        document.addEventListener("deviceready", new EventListener() {
+//            public void handleEvent(Event event) {
+//                Window.alert("Hi");
+//            }
+//
+//        });
         final long end = System.currentTimeMillis() + timeoutInMs;
         if (isPhoneGapInitialized()) {
 
@@ -82,24 +109,4 @@ public abstract class Cordova {
         deviceReady = true;
     }
 
-    // gwtphonegap
-    private native void setupReadyHook() /*-{
-        var that = this;
-        var f = function() {
-            that.@com.florianf.gwtcordova.client.Cordova::nativeDeviceReady()();
-        };
-        $doc.addEventListener("deviceready", $entry(f), false);
-    }-*/;
-
-
-    // gwtphonegap
-//    private void firePhoneGapAvailable() {
-//        if (!getDevice().isAvailable()) {
-//            log("Device API is not available - logging will not work");
-//            log("e.g.: plugman install --platform android  --project ./platforms/android/ --plugin org.apache.cordova.device");
-//        } else {
-//            phoneGapLog.setClientId(getDevice().getUuid());
-//        }
-//        handlerManager.fireEvent(new PhoneGapAvailableEvent());
-//    }
 }

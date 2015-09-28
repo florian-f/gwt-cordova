@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.florianf</groupId>
-  <artifactId>GwtCordova</artifactId>
-  <packaging>jar</packaging>
+  <groupId>com.florianf.gwtcordova</groupId>
+  <artifactId>gwtcordova</artifactId>
+  <packaging>war</packaging>
   <version>0.1</version>
-  <name>com.florianf.gwtcordova.GwtCordova</name>
+  <name>GWT Cordova</name>
 
   <properties>
     <!-- Convenience property to set the GWT version -->
@@ -92,7 +92,12 @@
         <!-- Plugin configuration. There are many available options, 
              see gwt-maven-plugin documentation at codehaus.org --> 
         <configuration>
-    <jsInteropMode>JS</jsInteropMode>
+          <jsInteropMode>JS</jsInteropMode>
+          <disableCastChecking>true</disableCastChecking>
+          <disableClassMetadata>true</disableClassMetadata>
+          <enableAssertions>false</enableAssertions>
+          <closureCompiler>true</closureCompiler>
+          <style>PRETTY</style>
           <modules>
             <module>com.florianf.gwtcordova.GwtCordova</module>
           </modules>
