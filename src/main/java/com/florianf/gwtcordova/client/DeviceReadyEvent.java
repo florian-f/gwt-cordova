@@ -10,14 +10,6 @@ import com.google.gwt.core.client.js.JsType;
 @JsType
 public interface DeviceReadyEvent {
 
-    static final String NAME = "deviceready";
+    String NAME = "deviceready";
 
-    public abstract class Listener implements EventListener {
-        protected abstract void handleEvent(DeviceReadyEvent deviceReadyEvent);
-
-        @Override
-        public void handleEvent(Event event) {
-            handleEvent((DeviceReadyEvent) event);
-        }
-    }
 }
