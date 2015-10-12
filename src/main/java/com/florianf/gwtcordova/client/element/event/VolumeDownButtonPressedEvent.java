@@ -9,5 +9,5 @@ import com.google.gwt.core.client.js.JsType;
 
 @JsType
 public interface VolumeDownButtonPressedEvent extends Event{
-
+    String NAME = "volumedownbutton";
 }
