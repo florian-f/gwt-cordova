@@ -21,6 +21,9 @@ public abstract class Cordova {
 
     private static boolean deviceReady;
 
+    /*
+     * This is necessary until JSInterop 1.0 is ready.
+     */
     public static native Device getDevice()/*-{
         return $wnd.device;
     }-*/;

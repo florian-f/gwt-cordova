@@ -9,5 +9,5 @@ import com.google.gwt.core.client.js.JsType;
 
 @JsType
 public interface PauseEvent extends Event{
-
+    String NAME = "pause";
 }
