@@ -2,6 +2,7 @@ package com.florianf.gwtcordova.client;
 
 import com.florianf.gwtcordova.client.elemental.Document;
 import com.florianf.gwtcordova.client.elemental.EventListener;
+import com.florianf.gwtcordova.client.plugin.camera.Camera;
 import com.florianf.gwtcordova.client.plugin.device.Device;
 import com.florianf.gwtcordova.client.plugin.dialogs.Notification;
 import com.florianf.gwtcordova.client.plugin.network.Connection;
@@ -38,6 +39,10 @@ public abstract class Cordova {
 
     public static native StatusBar getStatusBar()/*-{
         return $wnd.StatusBar;
+    }-*/;
+
+    public static native Camera getCamera()/*-{
+        return $wnd.navigator.camera;
     }-*/;
 
     // same as in com.google.gwt.dom.client.Document;
