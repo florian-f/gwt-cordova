@@ -11,7 +11,7 @@
 
   <properties>
     <!-- Convenience property to set the GWT version -->
-    <gwtVersion>2.8.0-SNAPSHOT</gwtVersion>
+    <gwtVersion>2.8.0</gwtVersion>
     <!-- Note: GWT needs at least java 1.6 -->
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -92,7 +92,6 @@
         <!-- Plugin configuration. There are many available options, 
              see gwt-maven-plugin documentation at codehaus.org --> 
         <configuration>
-          <jsInteropMode>JS</jsInteropMode>
           <disableCastChecking>true</disableCastChecking>
           <disableClassMetadata>true</disableClassMetadata>
           <enableAssertions>false</enableAssertions>
