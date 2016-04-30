@@ -1,6 +1,11 @@
 package com.florianf.gwtcordova.client.plugin.dialogs;
 
-import com.google.gwt.core.client.js.JsType;
+import com.florianf.gwtcordova.client.elemental.Function;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
+
+import java.util.function.Consumer;
 
 /**
  * Created by florian on 22.08.15.
@@ -8,16 +13,19 @@ import com.google.gwt.core.client.js.JsType;
  * https://github.com/apache/cordova-plugin-dialogs
  *
  */
-@JsType
-public interface Notification {
+public class Notification {
 
-    void alert(String message, AlertCallback alertCallback, String title, String buttonName);
+    @JsMethod(namespace = JsPackage.GLOBAL)
+    public static native void alert(String message, Function<Void, Void> alertCallback, String title, String buttonName);
 
-    void confirm(String message, ConfirmCallback confirmCallback, String title, String[] buttonLabels);
+    @JsMethod(namespace = JsPackage.GLOBAL)
+    public static native void confirm(String message, Function<Integer, Void> confirmCallback, String title, String[] buttonLabels);
 
-    void prompt(String message, PromptCallback callback, String title, String[] buttonLabels, String defaultText);
+    @JsMethod(namespace = JsPackage.GLOBAL)
+    public static native void prompt(String message, Function<Results, Void> PromptCallback, String title, String[] buttonLabels, String defaultText);
 
-    void beep(int times);
+    @JsMethod(namespace = JsPackage.GLOBAL)
+    public static native void beep(int times);
 
 //    default void prompt(String message, Callback callback) {
 //        prompt(message, callback, "Prompt", new String[]{"OK", "Cancel"}, "");

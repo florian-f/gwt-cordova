@@ -1,8 +1,8 @@
 package com.florianf.gwtcordova.client.elemental;
 
-import com.google.gwt.core.client.js.JsFunction;
+import jsinterop.annotations.JsFunction;
 
 @JsFunction
-public interface EventListener {
-    Object call (Event event);
+public interface EventListener<T extends Event> {
+    void handleEvent(T event);
 }

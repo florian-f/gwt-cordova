@@ -1,26 +1,35 @@
 package com.florianf.gwtcordova.client.plugin.device;
 
-import com.google.gwt.core.client.js.JsProperty;
-import com.google.gwt.core.client.js.JsType;
+
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
 
 /**
  * Created by florian on 09.08.15.
  */
-@JsType
-public interface Device {
+@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "device")
+public class Device {
 
-    @JsProperty
-    String getAvailable();
-    @JsProperty
-    String getPlatform();
-    @JsProperty
-    String getVersion();
-    @JsProperty
-    String getUuid();
-    @JsProperty
-    String getCordova();
-    @JsProperty
-    String getModel();
-    @JsProperty
-    String getManufacturer();
+    @JsProperty(name = "available")
+    public static native String getAvailable();
+
+    @JsProperty(name = "platform")
+    public static native String getPlatform();
+
+    @JsProperty(name = "version")
+    public static native String getVersion();
+
+    @JsProperty(name = "uuid")
+    public static native String getUuid();
+
+    @JsProperty(name = "cordova")
+    public static native String getCordova();
+
+    @JsProperty(name = "model")
+    public static native String getModel();
+
+    @JsProperty(name = "manufacturer")
+    public static native String getManufacturer();
+
 }

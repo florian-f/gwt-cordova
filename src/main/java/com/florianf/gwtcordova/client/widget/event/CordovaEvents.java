@@ -15,12 +15,10 @@ public class CordovaEvents extends Widget {
         super();
         getDocument().addEventListener(com.florianf.gwtcordova.client.element.event.PauseEvent.NAME, event -> {
             CordovaEvents.this.fireEvent(new PauseEvent(event));
-            return null;
-        }, true);
+        });
         getDocument().addEventListener(com.florianf.gwtcordova.client.element.event.ResumeEvent.NAME, event -> {
             CordovaEvents.this.fireEvent(new ResumeEvent(event));
-            return null;
-        }, true);
+        });
     }
 
 

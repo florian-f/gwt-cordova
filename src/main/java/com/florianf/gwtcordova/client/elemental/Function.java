@@ -1,8 +1,9 @@
 package com.florianf.gwtcordova.client.elemental;
 
-import com.google.gwt.core.client.js.JsFunction;
+import jsinterop.annotations.JsFunction;
 
 @JsFunction
-public interface Function  {
-    public Object call(Object arg);
+public interface Function<RET, ARG>  {
+    public RET call(ARG arg);
 }
+

@@ -60,12 +60,16 @@ public abstract class Cordova {
      * Returns the JsInterop instance of Document
      */
 
-    public static void init(EventListener listener) {
+    public static void init() {
 
         getDocument().addEventListener("deviceready", event -> {
             deviceReady = true;
-            return null;
-        }, true);
+        });
+    }
+
+    public static void init(EventListener eventListener) {
+        getDocument().addEventListener("deviceready", eventListener);
+        init();
     }
 
     public static boolean isDeviceReady() {
