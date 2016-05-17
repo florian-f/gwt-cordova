@@ -3,14 +3,9 @@ package com.florianf.gwtcordova.client.plugin.camera;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * Created by florian on 28.01.16.
- */
-//@JsType(isNative = true, namespace = "GLOBAL", name = "Camera")
 public interface CameraConstants {
 
-    //    @JsType(isNative = true, namespace = "Camera", name="DestinationType")
-    public enum DestinationType {
+    enum DestinationType {
         DATA_URL(0), FILE_URI(1), NATIVE_URL(2);
 
         private int value;

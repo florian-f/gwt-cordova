@@ -1,7 +1,5 @@
 package com.florianf.gwtcordova.client.plugin.camera;
 
-import com.google.gwt.core.client.js.JsType;
-import jsinterop.annotations.JsIgnore;
 import jsinterop.annotations.JsProperty;
 
 /**

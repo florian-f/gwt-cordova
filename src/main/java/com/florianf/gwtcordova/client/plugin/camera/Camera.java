@@ -2,12 +2,8 @@ package com.florianf.gwtcordova.client.plugin.camera;
 
 
 import com.florianf.gwtcordova.client.elemental.Function;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-/**
- * Created by florian on 15.10.15.
- */
 @JsType(isNative = true, namespace = "navigator", name="camera")
 public class Camera {
 

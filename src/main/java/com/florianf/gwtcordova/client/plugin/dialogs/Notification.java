@@ -5,8 +5,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-import java.util.function.Consumer;
-
 /**
  * Created by florian on 22.08.15.
  *
