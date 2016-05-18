@@ -1,7 +1,6 @@
 package com.florianf.gwtcordova.client;
 
-import com.florianf.gwtcordova.client.elemental.Document;
-import com.florianf.gwtcordova.client.elemental.EventListener;
+import com.florianf.gwtcordova.client.elemental.*;
 import com.florianf.gwtcordova.client.plugin.camera.Camera;
 import com.florianf.gwtcordova.client.plugin.device.Device;
 import com.florianf.gwtcordova.client.plugin.dialogs.Notification;
@@ -25,25 +24,6 @@ public abstract class Cordova {
     /*
      * This is necessary until JSInterop 1.0 is ready.
      */
-    public static native Device getDevice()/*-{
-        return $wnd.device;
-    }-*/;
-
-    public static native Connection getConnection()/*-{
-        return $wnd.navigator.connection;
-    }-*/;
-
-    public static native Notification getNotification()/*-{
-        return $wnd.navigator.notification;
-    }-*/;
-
-    public static native StatusBar getStatusBar()/*-{
-        return $wnd.StatusBar;
-    }-*/;
-
-    public static native Camera getCamera()/*-{
-        return $wnd.navigator.camera;
-    }-*/;
 
     // same as in com.google.gwt.dom.client.Document;
     private static native Document getDocument() /*-{
@@ -62,6 +42,7 @@ public abstract class Cordova {
 
     public static void init() {
 
+        com.florianf.gwtcordova.client.myelemental.Document.addEventListener("deviceready", event1 -> {});
         getDocument().addEventListener("deviceready", event -> {
             deviceReady = true;
         });
@@ -71,6 +52,25 @@ public abstract class Cordova {
         getDocument().addEventListener("deviceready", eventListener);
         init();
     }
+
+    public static void onReady(com.florianf.gwtcordova.client.myelemental.EventListener eventListener) {
+        if (deviceReady) {
+           eventListener.handleEvent(new Event() {
+               @Override
+               public Detail getDetail() {
+                   return null;
+               }
+
+               @Override
+               public EventTarget getTarget() {
+                   return null;
+               }
+           });
+        } else {
+            com.florianf.gwtcordova.client.myelemental.Document.addEventListener("deviceready", eventListener);
+        }
+    }
+
 
     public static boolean isDeviceReady() {
         return deviceReady;
