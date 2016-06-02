@@ -1,6 +1,11 @@
 package com.florianf.gwtcordova.client;
 
 import com.florianf.gwtcordova.client.elemental.*;
+import com.florianf.gwtcordova.client.elemental.Document;
+import com.florianf.gwtcordova.client.elemental.Event;
+import com.florianf.gwtcordova.client.elemental.EventListener;
+import com.florianf.gwtcordova.client.elemental.EventTarget;
+import com.florianf.gwtcordova.client.myelemental.*;
 import com.florianf.gwtcordova.client.plugin.camera.Camera;
 import com.florianf.gwtcordova.client.plugin.device.Device;
 import com.florianf.gwtcordova.client.plugin.dialogs.Notification;
@@ -43,6 +48,13 @@ public abstract class Cordova {
     public static void init() {
 
         com.florianf.gwtcordova.client.myelemental.Document.addEventListener("deviceready", event1 -> {});
+        com.florianf.gwtcordova.client.myelemental.Document.addEventListener("deviceready", new com.florianf.gwtcordova.client.myelemental.EventListener() {
+            @Override
+            public void handleEvent(Event event) {
+
+            }
+        });
+
         getDocument().addEventListener("deviceready", event -> {
             deviceReady = true;
         });
