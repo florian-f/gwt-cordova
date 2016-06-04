@@ -1,4 +1,4 @@
-package com.florianf.gwtcordova.client;
+package com.florianf.gwtcordova.client.base;
 
 import com.florianf.gwtcordova.client.elemental.Document;
 import com.florianf.gwtcordova.client.elemental.EventListener;

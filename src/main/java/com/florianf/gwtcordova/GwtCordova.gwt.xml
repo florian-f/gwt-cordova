@@ -4,6 +4,8 @@
 
   <inherits name='com.google.gwt.user.User'/>
 
-  <source path='client'/>
+  <source path='client/base'/>
+  <source path='client/elemental'/>
+  <source path='client/myelemental'/>
 
 </module>

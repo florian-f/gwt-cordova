@@ -1,18 +1,11 @@
 package com.florianf.gwtcordova.client.widget;
 
-import com.florianf.gwtcordova.client.Cordova;
-import com.florianf.gwtcordova.client.CordovaAsEnum;
-import com.florianf.gwtcordova.client.elemental.Event;
-import com.florianf.gwtcordova.client.elemental.EventListener;
-import com.florianf.gwtcordova.client.plugin.dialogs.Notification;
 import com.florianf.gwtcordova.client.widget.event.VolumeDownButtonPressedEvent;
 import com.florianf.gwtcordova.client.widget.event.VolumeDownButtonPressedEventHandler;
 import com.florianf.gwtcordova.client.widget.event.VolumeUpButtonPressedEvent;
 import com.florianf.gwtcordova.client.widget.event.VolumeUpButtonPressedEventHandler;
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.user.client.ui.Widget;
-
-import java.util.function.Consumer;
 
 /**
  * Created by florian on 12.10.15.
