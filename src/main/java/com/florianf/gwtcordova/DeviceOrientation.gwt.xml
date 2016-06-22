@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module rename-to='compass'>
+
+    <inherits name='com.florianf.gwtcordova.GwtCordova'/>
+
+    <source path='client/plugin/deviceorientation'/>
+
+</module>
