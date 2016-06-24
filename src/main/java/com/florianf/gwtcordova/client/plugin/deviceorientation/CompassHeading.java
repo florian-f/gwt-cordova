@@ -3,15 +3,15 @@ package com.florianf.gwtcordova.client.plugin.deviceorientation;
 import jsinterop.annotations.JsProperty;
 
 public interface CompassHeading {
-    @JsProperty
+    @JsProperty(name = "magneticHeading")
     public String getMagneticHeading();
 
-    @JsProperty
+    @JsProperty(name = "trueHeading")
     public String getTrueHeading();
 
-    @JsProperty
+    @JsProperty(name = "headingAccuracy")
     public String getHeadingAccuracy();
 
-    @JsProperty
+    @JsProperty(name = "timeStamp")
     public String getTimeStamp();
 }

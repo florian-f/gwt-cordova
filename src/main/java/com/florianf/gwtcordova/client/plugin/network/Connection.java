@@ -6,11 +6,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * Created by florian on 21.08.15.
- * <p/>
- * https://github.com/apache/cordova-plugin-network-information
- */
 public class Connection {
 
     public static final String TYPE_UNKNOWN = "unknown";

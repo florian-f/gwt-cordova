@@ -1,13 +1,13 @@
 package com.florianf.gwtcordova.client.plugin.dialogs;
 
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-
-/**
- * Created by florian on 22.08.15.
- */
-@JsType(isNative=true)
 public class Results {
+
+    @JsProperty(name = "buttonIndex")
     public native int getButtonIndex();
+
+    @JsProperty(name = "getInput1")
     public native String getInput1();
 }

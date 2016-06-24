@@ -7,7 +7,7 @@ import jsinterop.annotations.JsProperty;
  */
 public interface Coordinates {
 
-    @JsProperty
+    @JsProperty(name = "latitude")
     String getLatitude();
 
     @JsProperty

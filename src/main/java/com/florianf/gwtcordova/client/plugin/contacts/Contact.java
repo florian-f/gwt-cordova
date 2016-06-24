@@ -12,49 +12,49 @@ import jsinterop.annotations.JsType;
 public interface Contact {
 //    id, displayName, name, nickname, phoneNumbers, emails, addresses,
 //    ims, organizations, birthday, note, photos, categories, urls
-    @JsProperty
+    @JsProperty(name = "id")
     String getId();
 
-    @JsProperty
+    @JsProperty(name = "rawid")
     String getRawId();
 
-    @JsProperty
+    @JsProperty(name = "name")
     String getName();
 
-    @JsProperty
+    @JsProperty(name = "displayName")
     String getDisplayName();
 
-    @JsProperty
+    @JsProperty(name = "nickname")
     String getNickName();
 
-    @JsProperty
+    @JsProperty(name = "phoneNumbers")
     ContactField[] getPhoneNumbers();
 
-    @JsProperty
+    @JsProperty(name = "emails")
     ContactField[] getEmails();
 
-    @JsProperty
+    @JsProperty(name = "addresses")
     ContactAddress[] getAddresses();
 
-    @JsProperty
+    @JsProperty(name = "ims")
     ContactField[] getIms();
 
-    @JsProperty
+    @JsProperty(name = "organizations")
     ContactOrganization[] getOrganizations();
 
-    @JsProperty
+    @JsProperty(name = "birthday")
     ContactField[] getBirthday();
 
-    @JsProperty
+    @JsProperty(name = "note")
     String getNote();
 
-    @JsProperty
+    @JsProperty(name = "photos")
     ContactField[] getPhotos();
 
-    @JsProperty
+    @JsProperty(name = "categories")
     ContactField[] getCategories();
 
-    @JsProperty
+    @JsProperty(name = "urls")
     ContactField[] getUrls();
 
     Contact clone();
