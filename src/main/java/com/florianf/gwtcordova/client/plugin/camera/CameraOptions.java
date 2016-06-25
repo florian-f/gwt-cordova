@@ -14,20 +14,6 @@ public class CameraOptions {
     // solution: java POJO from which the JsType is constructed
     // problem: pattern inconsistency (some are enums, others not)
 
-//
-//    var quality = getValue(options.quality, 50);
-//    var destinationType = getValue(options.destinationType, Camera.DestinationType.FILE_URI);
-//    var sourceType = getValue(options.sourceType, Camera.PictureSourceType.CAMERA);
-//    var targetWidth = getValue(options.targetWidth, -1);
-//    var targetHeight = getValue(options.targetHeight, -1);
-//    var encodingType = getValue(options.encodingType, Camera.EncodingType.JPEG);
-//    var mediaType = getValue(options.mediaType, Camera.MediaType.PICTURE);
-//    var allowEdit = !!options.allowEdit;
-//    var correctOrientation = !!options.correctOrientation;
-//    var saveToPhotoAlbum = !!options.saveToPhotoAlbum;
-//    var popoverOptions = getValue(options.popoverOptions, null);
-//    var cameraDirection = getValue(options.cameraDirection, Camera.Direction.BACK);
-    
     @JsProperty
     private int destinationType = CameraConstants.DestinationType.FILE_URI.getValue();
 

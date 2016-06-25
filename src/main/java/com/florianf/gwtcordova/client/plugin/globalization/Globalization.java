@@ -8,6 +8,6 @@ public class Globalization {
 
     public static native void getPreferredLanguage(Function<Void, String> success, Function<Void, GlobalizationError> error);
 
-    public static native void getLocaleName(Function<Void, String> success, Function<Void, GlobalizationError> error);
+    public static native void getLocaleName(Function<Void, Locale> success, Function<Void, GlobalizationError> error);
 
 }

@@ -10,8 +10,7 @@ import jsinterop.annotations.JsType;
  */
 @JsType
 public interface Contact {
-//    id, displayName, name, nickname, phoneNumbers, emails, addresses,
-//    ims, organizations, birthday, note, photos, categories, urls
+
     @JsProperty(name = "id")
     String getId();
 

@@ -1,20 +1,17 @@
 package com.florianf.gwtcordova.client.plugin.screenorientation;
 
-import com.google.gwt.core.client.js.JsNamespace;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsType;
+import jsinterop.annotations.JsProperty;
 
 /**
- * Created by ffriemel on 23/06/16.
+ * Created by ffriemel on 25/06/16.
  */
-@JsType(isNative = true, namespace = JsNamespace.GLOBAL, name = "screen")
-public class ScreenOrientation {
+public interface ScreenOrientation {
 
-    public static native void lockOrientation(String orientation);
+    @JsProperty(name = "angle")
+    double getAngle();
 
-    public static native void unlockOrientation();
-
-    @JsMethod(name = "orientation")
-    public static native String getOrientation();
+    @JsProperty(name = "type")
+    String getType();
 
 }
+
