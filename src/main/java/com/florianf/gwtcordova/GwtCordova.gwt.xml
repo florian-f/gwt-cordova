@@ -8,4 +8,23 @@
   <source path='client/elemental'/>
   <source path='client/myelemental'/>
 
+  <define-property name="cordova.platform" values="android, ios, browser"/>
+
+  <property-provider name="cordova.platform"><![CDATA[
+  	{
+	    var userAgent = window.navigator.userAgent.toLowerCase();
+	    if (userAgent.indexOf('android') != -1) {
+	      return "android"
+	    }
+
+	    if(userAgent.indexOf('ipad') != -1 || userAgent.indexOf('ipod') != -1  || userAgent.indexOf('iphone') != -1) {
+	      return "ios"
+	    }
+
+	    return "browser";
+  	}
+    ]]></property-provider>
+
+  <set-property name="cordova.platform" value="android, ios, browser"/>
+  <set-property-fallback name="cordova.platform" value="android"/>
 </module>

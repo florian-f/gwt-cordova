@@ -6,4 +6,10 @@
 
     <source path='client/plugin/screenorientation'/>
 
+    <replace-with class="com.florianf.gwtcordova.client.plugin.screenorientation.ios.Screen">
+        <when-type-is class="com.florianf.gwtcordova.client.plugin.screenorientation.Screen"/>
+        <all>
+            <when-property-is name="cordova.platform" value="ios"/>
+        </all>
+    </replace-with>
 </module>

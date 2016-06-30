@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 public interface ScreenOrientation {
 
     @JsProperty(name = "angle")
-    double getAngle();
+    int getAngle();
 
     @JsProperty(name = "type")
     String getType();
