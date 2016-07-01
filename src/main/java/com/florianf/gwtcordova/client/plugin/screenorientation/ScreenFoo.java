@@ -1,10 +1,6 @@
 package com.florianf.gwtcordova.client.plugin.screenorientation;
 
-import com.florianf.gwtcordova.client.plugin.screenorientation.ios.ScreenOrientationIOS;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.core.client.js.JsNamespace;
-import jsinterop.annotations.JsIgnore;
-import jsinterop.annotations.JsType;
 
 /**
  * Created by ffriemel on 28/06/16.
@@ -13,10 +9,10 @@ public class ScreenFoo {
 
     private static ScreenFoo instance;
 
-    private Screen screen;
+    private ScreenI screeny;
 
     private ScreenFoo() {
-        this.screen = GWT.create(Screen.class);
+        screeny = GWT.create(Screeny.class);
     }
 
     public static ScreenFoo getInstance() {
@@ -27,14 +23,14 @@ public class ScreenFoo {
     }
 
     public void lockOrientation(String orientation) {
-        this.screen.lockOrientation(orientation);
+        this.screeny.lockOrientation(orientation);
     }
 
     public void unLockOrientation() {
-        this.screen.unlockOrientation();
+        this.screeny.unlockOrientation();
     }
 
     public String getOrientation() {
-        return this.screen.getOrientation();
+        return this.screeny.getOrientation();
     }
 }

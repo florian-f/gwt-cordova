@@ -18,7 +18,7 @@ public interface Contact {
     String getRawId();
 
     @JsProperty(name = "name")
-    String getName();
+    ContactName getName();
 
     @JsProperty(name = "displayName")
     String getDisplayName();

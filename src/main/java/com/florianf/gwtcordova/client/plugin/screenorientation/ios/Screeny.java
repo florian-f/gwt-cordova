@@ -1,7 +1,8 @@
-package com.florianf.gwtcordova.client.plugin.screenorientation;
+package com.florianf.gwtcordova.client.plugin.screenorientation.ios;
 
+import com.florianf.gwtcordova.client.plugin.screenorientation.ScreenI;
+import com.florianf.gwtcordova.client.plugin.screenorientation.ios.Screen;
 import com.google.gwt.core.client.js.JsNamespace;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
@@ -19,6 +20,6 @@ public class Screeny implements ScreenI{
     }
 
     public String getOrientation() {
-        return Screen.getOrientation().getType();
+        return Screen.getOrientation();
     }
 }
