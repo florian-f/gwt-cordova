@@ -8,10 +8,10 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Entry")
 public interface FileEntry {
 
-    @JsProperty
+    @JsProperty(name = "isFile")
     boolean isFile();
 
-    @JsProperty
+    @JsProperty(name = "isDirectory")
     boolean isDirectory();
 
     @JsProperty(name = "name")
