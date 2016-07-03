@@ -1,10 +1,11 @@
 package com.florianf.gwtcordova.client.plugin.file;
 
+import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative = true, name = JsPackage.GLOBAL)
 public interface FileWriter {
 
-    void write(File file, boolean isPendingBlobReadResult);
+    void write(String data);
 
 }

@@ -3,7 +3,7 @@
 <module rename-to='filetransfer'>
 
     <inherits name='com.florianf.gwtcordova.GwtCordova'/>
-
+    <inherits name='com.florianf.gwtcordova.File'/>
     <source path='client/plugin/filetransfer'/>
 
 </module>

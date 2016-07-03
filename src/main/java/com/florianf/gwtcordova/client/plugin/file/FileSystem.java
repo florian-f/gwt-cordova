@@ -1,22 +1,22 @@
 package com.florianf.gwtcordova.client.plugin.file;
 
-import com.florianf.gwtcordova.client.myelemental.Function;
-import com.google.gwt.core.client.js.JsNamespace;
+import com.florianf.gwtcordova.client.elemental.myelemental.Function;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType()
-public interface FileSystem {
+@JsType(isNative = true, namespace = JsPackage.GLOBAL)
+public class FileSystem {
 
-    DirectoryEntry getRoot();
+    @JsProperty(name = "root")
+    public native DirectoryEntry getRoot();
 
-    String getName();
+    @JsProperty(name = "name")
+    public native String getName();
 
-    String toJSON();
+    public native String toJSON();
 
-    String encodeURIPath();
-
-    @JsMethod(namespace = "window")
-    void requestFileSystem(int type, int size, Function<Void, FileSystem> success, Function<Void, FileError> error);
+    public native String encodeURIPath();
 
 }

@@ -1,4 +1,4 @@
-package com.florianf.gwtcordova.client.myelemental;
+package com.florianf.gwtcordova.client.elemental.myelemental;
 
 import jsinterop.annotations.JsFunction;
 

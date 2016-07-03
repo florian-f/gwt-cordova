@@ -1,6 +1,6 @@
-package com.florianf.gwtcordova.client.myelemental;
+package com.florianf.gwtcordova.client.elemental.myelemental;
 
-import com.florianf.gwtcordova.client.myelemental.Function;
+import com.florianf.gwtcordova.client.elemental.myelemental.Function;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 

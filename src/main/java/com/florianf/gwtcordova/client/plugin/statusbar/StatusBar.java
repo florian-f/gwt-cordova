@@ -1,36 +1,30 @@
 package com.florianf.gwtcordova.client.plugin.statusbar;
 
-
+import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * Created by florian on 22.08.15.
- *
- * https://github.com/apache/cordova-plugin-statusbar
- *
- */
-@JsType
-public interface StatusBar {
+@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "StatusBar")
+public class StatusBar {
 
     @JsProperty
-    boolean isVisible();
+    public static native boolean isVisible();
 
-    void overlaysWebView(boolean ios); // only useful on ios
+    public static native void overlaysWebView(boolean ios); // only useful on ios
 
-    void styleDefault();
+    public static native void styleDefault();
 
-    void styleLightContent();
+    public static native void styleLightContent();
 
-    void styleBlackTranslucent();
+    public static native void styleBlackTranslucent();
 
-    void styleBlackOpaque();
+    public static native void styleBlackOpaque();
 
-    void backgroundColorByName(String name);
+    public static native void backgroundColorByName(String name);
 
-    void backgroundColorByHexString(String hexString);
+    public static native void backgroundColorByHexString(String hexString);
 
-    void hide();
+    public static native void hide();
 
-    void show();
+    public static native void show();
 }

@@ -1,7 +1,7 @@
-package com.florianf.gwtcordova.client.myelemental;
+package com.florianf.gwtcordova.client.elemental.myelemental;
 
-import com.florianf.gwtcordova.client.myelemental.EventTarget;
-import com.florianf.gwtcordova.client.myelemental.NodeList;
+import com.florianf.gwtcordova.client.elemental.myelemental.EventTarget;
+import com.florianf.gwtcordova.client.elemental.myelemental.NodeList;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

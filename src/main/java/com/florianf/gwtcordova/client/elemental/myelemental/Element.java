@@ -1,9 +1,9 @@
-package com.florianf.gwtcordova.client.myelemental;
+package com.florianf.gwtcordova.client.elemental.myelemental;
 
 //import com.florianf.gwtcordova.client.elemental.CSSStyleDeclaration;
 //import com.florianf.gwtcordova.client.elemental.DOMTokenList;
-import com.florianf.gwtcordova.client.myelemental.Node;
-import com.florianf.gwtcordova.client.myelemental.NodeList;
+import com.florianf.gwtcordova.client.elemental.myelemental.Node;
+import com.florianf.gwtcordova.client.elemental.myelemental.NodeList;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

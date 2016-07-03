@@ -5,7 +5,7 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "notification")
+@JsType(isNative = true, namespace = "navigator", name = "notification")
 public class Notification {
 
     public static native void alert(String message, Function<Void, Void> alertCallback, String title, String buttonName);
