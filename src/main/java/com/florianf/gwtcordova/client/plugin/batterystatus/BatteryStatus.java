@@ -1,6 +1,6 @@
 package com.florianf.gwtcordova.client.plugin.batterystatus;
 
-import com.florianf.gwtcordova.client.elemental.myelemental.Event;
+import com.florianf.gwtcordova.client.elemental.Event;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;

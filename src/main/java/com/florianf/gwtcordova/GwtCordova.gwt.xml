@@ -6,7 +6,6 @@
 
   <source path='client/base'/>
   <source path='client/elemental'/>
-  <source path='client/myelemental'/>
 
   <define-property name="cordova.platform" values="android, ios, browser"/>
 

@@ -1,14 +1,16 @@
 package com.florianf.gwtcordova.client.elemental;
 
-import static jsinterop.annotations.JsPackage.GLOBAL;
+import com.florianf.gwtcordova.client.elemental.Node;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 @JsType(isNative=true, namespace=GLOBAL)
-public interface NodeList {
+public class NodeList {
 
     @JsProperty
-    int getLength();
+    public static native int getLength();
 
-    <T extends Node> T item(int index);
+    public static native <T extends Node> T item(int index);
 }

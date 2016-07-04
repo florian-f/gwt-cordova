@@ -1,7 +1,6 @@
 package com.florianf.gwtcordova.client.plugin.contacts;
 
 import com.florianf.gwtcordova.client.elemental.Function;
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 

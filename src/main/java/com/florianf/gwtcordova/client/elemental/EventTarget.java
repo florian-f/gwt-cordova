@@ -1,9 +1,10 @@
 package com.florianf.gwtcordova.client.elemental;
 
-import static jsinterop.annotations.JsPackage.GLOBAL;
 import jsinterop.annotations.JsType;
 
+import static jsinterop.annotations.JsPackage.GLOBAL;
+
 @JsType(isNative=true, namespace=GLOBAL)
-public interface EventTarget {
-    void addEventListener(String type, EventListener listener);
+public class EventTarget {
+    public static native void addEventListener(String type, EventListener listener);
 }

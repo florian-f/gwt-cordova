@@ -1,7 +1,5 @@
 package com.florianf.gwtcordova.client.plugin.media;
 
-import com.florianf.gwtcordova.client.elemental.Function;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
