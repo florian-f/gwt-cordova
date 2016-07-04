@@ -2,9 +2,6 @@ package com.florianf.gwtcordova.client.plugin.screenorientation;
 
 import com.google.gwt.core.client.GWT;
 
-/**
- * Created by ffriemel on 28/06/16.
- */
 public class ScreenFoo {
 
     private static ScreenFoo instance;

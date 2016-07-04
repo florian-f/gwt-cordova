@@ -15,6 +15,6 @@ public interface Event {
     EventTarget getTarget();
 
     @JsType(isNative=true)
-    public interface Detail {
+    interface Detail {
     }
 }

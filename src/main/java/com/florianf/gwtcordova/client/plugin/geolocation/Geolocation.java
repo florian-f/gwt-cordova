@@ -3,9 +3,6 @@ package com.florianf.gwtcordova.client.plugin.geolocation;
 import com.florianf.gwtcordova.client.elemental.Function;
 import jsinterop.annotations.JsType;
 
-/**
- * Created by ffriemel on 22/06/16.
- */
 @JsType(isNative = true, namespace = "navigator", name = "geolocation")
 public class Geolocation {
 

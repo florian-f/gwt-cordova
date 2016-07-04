@@ -5,9 +5,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * Created by florian on 09.08.15.
- */
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "device")
 public class Device {
 

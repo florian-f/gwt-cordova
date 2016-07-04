@@ -2,17 +2,7 @@ package com.florianf.gwtcordova.client.plugin.camera;
 
 import jsinterop.annotations.JsProperty;
 
-/**
- * Created by florian on 15.10.15.
- */
 public class CameraOptions {
-    // will *not* be 'undefined' in js if not set;
-    // will be defined in the prototype, so getValue does not work as intended; prevent with @JsIgnore
-    // camera.js uses default values if 'undefined'
-
-    // problem in java: shouldn't have getters if possibly uninitialized
-    // solution: java POJO from which the JsType is constructed
-    // problem: pattern inconsistency (some are enums, others not)
 
     @JsProperty
     private int destinationType = CameraConstants.DestinationType.FILE_URI.getValue();

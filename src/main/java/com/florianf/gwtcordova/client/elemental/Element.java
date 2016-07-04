@@ -1,7 +1,5 @@
 package com.florianf.gwtcordova.client.elemental;
 
-//import com.florianf.gwtcordova.client.elemental.CSSStyleDeclaration;
-//import com.florianf.gwtcordova.client.elemental.DOMTokenList;
 import com.florianf.gwtcordova.client.elemental.Node;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -21,17 +19,4 @@ public class Element extends Node {
     @JsProperty
     public static native void setTextContent(String s);
 
-//    @JsProperty
-//    DOMTokenList getClassList();
-
-//    @JsProperty
-//    CSSStyleDeclaration getStyle();
-//
-//    void setAttribute(String name, Object value);
-//    String getAttribute(String name);
-//    boolean hasAttribute(String name);
-//    void removeAttribute(String name);
-//
-//    <T extends Element> T querySelector(String selector);
-//    NodeList querySelectorAll(String selector);
 }

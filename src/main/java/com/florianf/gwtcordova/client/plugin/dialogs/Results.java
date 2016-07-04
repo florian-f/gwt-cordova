@@ -1,7 +1,6 @@
 package com.florianf.gwtcordova.client.plugin.dialogs;
 
 import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
 
 public class Results {
 

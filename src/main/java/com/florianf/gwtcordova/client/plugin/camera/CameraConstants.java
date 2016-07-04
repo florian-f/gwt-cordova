@@ -1,8 +1,5 @@
 package com.florianf.gwtcordova.client.plugin.camera;
 
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
-
 public interface CameraConstants {
 
     enum DestinationType {

@@ -4,9 +4,6 @@ import com.florianf.gwtcordova.client.elemental.Function;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-/**
- * Created by ffriemel on 23/06/16.
- */
 @JsType
 public interface Contact {
 
