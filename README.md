@@ -1,8 +1,8 @@
 # GWT Cordova
 
-GWT Cordova is an experimental Wrapper for the Apache Cordova API, similarly to GWT Phonegap. The main difference is the use of JavaScript Interoperability instead of JSNI.
+GWT Cordova is an experimental Wrapper for the Apache Cordova API, similar to GWT Phonegap. The main difference is the use of JavaScript Interoperability instead of JSNI.
 
-If you want to build this yourself, run `mvn clean install` to build and install the library locally and add the following dependency to your `pom.xml`:
+Run `mvn clean install` to build and install the library locally and add the following dependency to your `pom.xml`:
 
     <dependency>
       <groupId>com.florianf.gwtcordova</groupId>
