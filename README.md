@@ -11,4 +11,4 @@ If you want to build this yourself, run `mvn clean install` to build and install
       <scope>provided</scope>
     </dependency>
 
-There is also a [Showcase App]() that demonstrates how to use GWT Cordova.
+There is also a [Showcase App](https://github.com/florian-f/gwt-cordova-showcase) that demonstrates how to use GWT Cordova.
