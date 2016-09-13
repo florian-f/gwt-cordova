@@ -11,4 +11,4 @@ Run `mvn clean install` to build and install the library locally and add the fol
       <scope>provided</scope>
     </dependency>
 
-There is also a [Showcase App](https://github.com/florian-f/gwt-cordova-showcase) that demonstrates how to use GWT Cordova.
+There is a [Showcase App](https://github.com/florian-f/gwt-cordova-showcase) that demonstrates how to use GWT Cordova.
