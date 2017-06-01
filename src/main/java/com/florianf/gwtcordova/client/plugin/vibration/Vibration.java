@@ -1,9 +1,9 @@
 package com.florianf.gwtcordova.client.plugin.vibration;
 
-import com.google.gwt.core.client.js.JsNamespace;
+import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = JsNamespace.GLOBAL, name = "navigator")
+@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "navigator")
 public class Vibration {
 
     public static native void vibrate(int time);
