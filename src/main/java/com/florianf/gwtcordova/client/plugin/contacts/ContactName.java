@@ -1,25 +1,26 @@
 package com.florianf.gwtcordova.client.plugin.contacts;
 
+import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name = "name")
-public interface ContactName {
-    @JsProperty(name = "familyName")
-    String getFamilyName();
+@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
+public class ContactName {
+	@JsProperty
+	public String familyName;
 
-    @JsProperty(name = "formatted")
-    String getFormattedName();
+	@JsProperty
+	public String formatted;
 
-    @JsProperty(name = "givenName")
-    String getGivenName();
+	@JsProperty
+	public String givenName;
 
-    @JsProperty(name = "honoricPrefix")
-    String getHonoricPrefix();
+	@JsProperty
+	public String honoricPrefix;
 
-    @JsProperty(name = "honoricSuffix")
-    String getHonoricSuffix();
+	@JsProperty
+	public String honoricSuffix;
 
-    @JsProperty(name = "middleName")
-    String getMiddleName();
+	@JsProperty
+	public String middleName;
 }

@@ -3,10 +3,9 @@ package com.florianf.gwtcordova.client.plugin.contacts;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative = true)
 public interface ContactError {
 
-    @JsProperty(name = "code")
-    int getCode();
-
+	@JsProperty
+	int getCode();
 }

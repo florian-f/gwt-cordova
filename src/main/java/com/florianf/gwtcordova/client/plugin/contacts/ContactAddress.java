@@ -1,33 +1,32 @@
 package com.florianf.gwtcordova.client.plugin.contacts;
 
+import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
-public interface ContactAddress {
+@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
+public class ContactAddress {
+	@JsProperty
+	public String id;
 
-    @JsProperty(name = "id")
-    String getId();
+	@JsProperty
+	public String type;
 
-    @JsProperty(name = "type")
-    String getType();
+	@JsProperty
+	public String formatted;
 
-    @JsProperty(name = "formatted")
-    String getFormatted();
+	@JsProperty
+	public String streetAddress;
 
-    @JsProperty(name = "streetaddress")
-    String getStreetAddress();
+	@JsProperty
+	public String locality;
 
-    @JsProperty(name = "locality")
-    String getLocality();
+	@JsProperty
+	public String region;
 
-    @JsProperty(name = "region")
-    String getRegion();
+	@JsProperty
+	public String postalCode;
 
-    @JsProperty(name = "postalCode")
-    String getPostalCode();
-
-    @JsProperty(name = "country")
-    String getCountry();
-
+	@JsProperty
+	public String country;
 }
