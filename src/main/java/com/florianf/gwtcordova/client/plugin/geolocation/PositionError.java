@@ -1,6 +1,6 @@
 package com.florianf.gwtcordova.client.plugin.geolocation;
 
-import com.google.gwt.core.client.js.JsProperty;
+import jsinterop.annotations.JsProperty;
 
 public interface PositionError {
 
