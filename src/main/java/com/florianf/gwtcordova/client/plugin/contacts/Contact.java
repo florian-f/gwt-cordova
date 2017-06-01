@@ -4,55 +4,54 @@ import com.florianf.gwtcordova.client.elemental.Function;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType
+@JsType(isNative = true)
 public interface Contact {
+	@JsProperty
+	String getId();
 
-    @JsProperty(name = "id")
-    String getId();
+	@JsProperty
+	String getRawId();
 
-    @JsProperty(name = "rawid")
-    String getRawId();
+	@JsProperty
+	ContactName getName();
 
-    @JsProperty(name = "name")
-    ContactName getName();
+	@JsProperty
+	String getDisplayName();
 
-    @JsProperty(name = "displayName")
-    String getDisplayName();
+	@JsProperty
+	String getNickName();
 
-    @JsProperty(name = "nickname")
-    String getNickName();
+	@JsProperty
+	ContactField[] getPhoneNumbers();
 
-    @JsProperty(name = "phoneNumbers")
-    ContactField[] getPhoneNumbers();
+	@JsProperty
+	ContactField[] getEmails();
 
-    @JsProperty(name = "emails")
-    ContactField[] getEmails();
+	@JsProperty
+	ContactAddress[] getAddresses();
 
-    @JsProperty(name = "addresses")
-    ContactAddress[] getAddresses();
+	@JsProperty
+	ContactField[] getIms();
 
-    @JsProperty(name = "ims")
-    ContactField[] getIms();
+	@JsProperty
+	ContactOrganization[] getOrganizations();
 
-    @JsProperty(name = "organizations")
-    ContactOrganization[] getOrganizations();
+	@JsProperty
+	ContactField[] getBirthday();
 
-    @JsProperty(name = "birthday")
-    ContactField[] getBirthday();
+	@JsProperty
+	String getNote();
 
-    @JsProperty(name = "note")
-    String getNote();
+	@JsProperty
+	ContactField[] getPhotos();
 
-    @JsProperty(name = "photos")
-    ContactField[] getPhotos();
+	@JsProperty
+	ContactField[] getCategories();
 
-    @JsProperty(name = "categories")
-    ContactField[] getCategories();
+	@JsProperty
+	ContactField[] getUrls();
 
-    @JsProperty(name = "urls")
-    ContactField[] getUrls();
+	Contact clone();
 
-    Contact clone();
-
-    void save(Function<Void, Contact> success, Function<Void, ContactError> error);
+	void save(Function<Void, Contact> success, Function<Void, ContactError> error);
 }
