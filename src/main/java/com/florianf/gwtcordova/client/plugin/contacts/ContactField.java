@@ -8,16 +8,16 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "ContactField")
 public class ContactField {
 
-	@JsProperty
-	public String type;
+    @JsProperty
+    public String type;
 
-	@JsProperty
-	public String value;
+    @JsProperty
+    public String value;
 
-	@JsProperty
-	public boolean pref;
+    @JsProperty
+    public boolean pref;
 
-	@JsConstructor
-	public ContactField(String type, String value, boolean pref) {
-	}
+    @JsConstructor
+    public ContactField(String type, String value, boolean pref) {
+    }
 }

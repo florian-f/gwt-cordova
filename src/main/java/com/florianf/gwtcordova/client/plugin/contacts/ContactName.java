@@ -6,21 +6,21 @@ import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
 public class ContactName {
-	@JsProperty
-	public String familyName;
+    @JsProperty
+    public String familyName;
 
-	@JsProperty
-	public String formatted;
+    @JsProperty
+    public String formatted;
 
-	@JsProperty
-	public String givenName;
+    @JsProperty
+    public String givenName;
 
-	@JsProperty
-	public String honoricPrefix;
+    @JsProperty
+    public String honoricPrefix;
 
-	@JsProperty
-	public String honoricSuffix;
+    @JsProperty
+    public String honoricSuffix;
 
-	@JsProperty
-	public String middleName;
+    @JsProperty
+    public String middleName;
 }

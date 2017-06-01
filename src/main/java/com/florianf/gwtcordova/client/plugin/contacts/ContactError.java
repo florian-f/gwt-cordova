@@ -6,6 +6,6 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true)
 public interface ContactError {
 
-	@JsProperty
-	int getCode();
+    @JsProperty
+    int getCode();
 }
