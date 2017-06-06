@@ -1,57 +1,82 @@
 package com.florianf.gwtcordova.client.plugin.contacts;
 
 import com.florianf.gwtcordova.client.elemental.Function;
+import com.google.gwt.core.client.JsDate;
+
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
 public interface Contact {
-	@JsProperty
-	String getId();
+    @JsProperty
+    String getId();
 
-	@JsProperty
-	String getRawId();
+    @JsProperty
+    ContactName getName();
+    @JsProperty
+    void setName(ContactName name);
 
-	@JsProperty
-	ContactName getName();
+    @JsProperty
+    String getDisplayName();
+    @JsProperty
+    void setDisplayName(String s);
 
-	@JsProperty
-	String getDisplayName();
+    @JsProperty
+    String getNickName();
+    @JsProperty
+    void setNickName(String s);
 
-	@JsProperty
-	String getNickName();
+    @JsProperty
+    ContactField[] getPhoneNumbers();
+    @JsProperty
+    void setPhoneNumbers(ContactField[] f);
 
-	@JsProperty
-	ContactField[] getPhoneNumbers();
+    @JsProperty
+    ContactField[] getEmails();
+    @JsProperty
+    void setEmails(ContactField[] f);
 
-	@JsProperty
-	ContactField[] getEmails();
+    @JsProperty
+    ContactAddress[] getAddresses();
+    @JsProperty
+    void setAddresses(ContactAddress[] f);
 
-	@JsProperty
-	ContactAddress[] getAddresses();
+    @JsProperty
+    ContactField[] getIms();
+    @JsProperty
+    void setIms(ContactField[] f);
 
-	@JsProperty
-	ContactField[] getIms();
+    @JsProperty
+    ContactOrganization[] getOrganizations();
+    @JsProperty
+    void setOrganizations(ContactOrganization[] f);
 
-	@JsProperty
-	ContactOrganization[] getOrganizations();
+    @JsProperty
+    JsDate getBirthday();
+    @JsProperty
+    void setBirthday(JsDate d);
 
-	@JsProperty
-	ContactField[] getBirthday();
+    @JsProperty
+    String getNote();
+    @JsProperty
+    void setNote(String s);
 
-	@JsProperty
-	String getNote();
+    @JsProperty
+    ContactField[] getPhotos();
+    @JsProperty
+    void setPhotos(ContactField[] f);
 
-	@JsProperty
-	ContactField[] getPhotos();
+    @JsProperty
+    ContactField[] getCategories();
+    @JsProperty
+    void setCategories(ContactField[] f);
 
-	@JsProperty
-	ContactField[] getCategories();
+    @JsProperty
+    ContactField[] getUrls();
+    @JsProperty
+    void setUrls(ContactField[] f);
 
-	@JsProperty
-	ContactField[] getUrls();
+    Contact clone();
 
-	Contact clone();
-
-	void save(Function<Void, Contact> success, Function<Void, ContactError> error);
+    void save(Function<Void, Contact> success, Function<Void, ContactError> error);
 }

@@ -6,18 +6,18 @@ import jsinterop.annotations.JsType;
 
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
 public class ContactOrganization {
-	@JsProperty
-	public boolean pref;
+    @JsProperty
+    public boolean pref;
 
-	@JsProperty
-	public String type;
+    @JsProperty
+    public String type;
 
-	@JsProperty
-	public String name;
+    @JsProperty
+    public String name;
 
-	@JsProperty
-	public String department;
+    @JsProperty
+    public String department;
 
-	@JsProperty
-	public String tytle;
+    @JsProperty
+    public String tytle;
 }
